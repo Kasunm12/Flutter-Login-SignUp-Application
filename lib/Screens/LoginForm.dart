@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:flutter_login_application/Comm/genTextFormField.dart';
 import 'package:flutter_login_application/Screens/SignUpForm.dart';
 
 class LoginForm extends StatefulWidget {
@@ -9,6 +10,7 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,16 +63,16 @@ class _LoginFormState extends State<LoginForm> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                        borderRadius: 
-                          BorderRadius.all(Radius.circular(30.0)),
-                          borderSide: BorderSide(
+                        borderRadius:
+                        BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
                             color: Colors.transparent
-                          ),
+                        ),
                       ),
 
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: 
-                          BorderRadius.all(Radius.circular(30.0)),
+                        borderRadius:
+                        BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(
                             color: Colors.blue
                         ),
@@ -84,6 +86,10 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                   ),
                 ),
+
+
+                SizedBox(height: 5.0),
+
 
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -115,6 +121,9 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                   ),
                 ),
+
+
+
 
 
                 Container(
