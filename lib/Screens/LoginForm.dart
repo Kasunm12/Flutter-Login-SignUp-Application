@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_application/Screens/SignUpForm.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
-                      fontSize: 40.0),
+                      fontSize: 30.0),
                 ),
                 SizedBox(height: 10.0),
                 Image.asset(
@@ -38,12 +39,22 @@ class _LoginFormState extends State<LoginForm> {
 
                 SizedBox(height: 10.0),
                 Text(
-                  'Sample Code',
+                  'Welcome to',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black38,
                       fontSize: 25.0),
                 ),
+
+                SizedBox(height: 10.0),
+                Text(
+                  'EduLIFE Solutions',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                      fontSize: 30.0),
+                ),
+
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 20.0),
@@ -66,7 +77,7 @@ class _LoginFormState extends State<LoginForm> {
                       ),
 
                       prefixIcon: Icon(Icons.person),
-                      hintText: "User Name",
+                      hintText: "User ID",
                       fillColor: Colors.grey[200],
                       filled: true,
 
@@ -105,6 +116,7 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 ),
 
+
                 Container(
                   margin: EdgeInsets.all(30.0),
                   width: double.infinity,
@@ -120,6 +132,25 @@ class _LoginFormState extends State<LoginForm> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(30.0)
                   ),
+                ),
+
+                Center(
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Does not have account?"),
+                        FlatButton(
+                          textColor: Colors.blue,
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpForm() ));
+                          },
+                          child: Text("SignUp"),
+                        ),
+                      ],
+                    ),
+                  ),
+
                 ),
               ],
             ),
